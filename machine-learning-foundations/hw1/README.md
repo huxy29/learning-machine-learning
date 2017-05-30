@@ -65,7 +65,7 @@
 &emsp;&emsp;`train_pocket` 方法在 `train` 方法的基础上加入 'w_pocket'，将最优的 w 装入口袋(pocket)，实现了 pocket 算法，T18 调用 `train_pocket` 和 `verify_pocket` 方法 2000 次，统计平均错误率，具体运行的代码在 `pla.ipynb` 中; T19 调用 `train_pocket` 和 设置了 'pocket=False' 的 `verify_pocket` 方法 2000 次，统计平均错误率，因为在 `train` 方法中，同时保存了迭代50轮后的 w 和 w_pocket，设置 'pocket=False' 时是使用 w 来在测试集上做分类的；T20 在 T18 的基础上设置 'iteration=100' 即可。
 
 
-**【注：如有错误，望不吝指正，欢迎交流学习。邮箱：3051266671@qq.com】**
+**【注：如有错误，望不吝指正，欢迎交流学习。邮箱：3051266672@qq.com】**
 
 ---
 
