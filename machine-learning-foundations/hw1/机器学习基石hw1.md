@@ -1,8 +1,9 @@
 ﻿# 机器学习基石 hw1
 
 ## Problem 1
-![QQ截图20170528235206.png-60.7kB][1]
-【视频学习笔记】适合使用机器学习的三个关键要素：
+![][1]
+
+【笔记】适合使用机器学习的三个关键要素：
 
 - 存在某些潜在的模式或者规则可以学习
 - 没有具体的定义或者规则，来编写程序，或者不容易给出完备的定义或者规则
@@ -16,8 +17,9 @@
 
 ## Problem 2-5
 
-![QQ截图20170529004959.png-101.8kB][2]
-【学习笔记】
+![][2]
+
+【笔记】
 监督式学习：训练数据由一条记录的输入特征和预期输出组成，希望通过训练学习到潜在的模式，来预测未知的数据，包括分类和回归
 无监督学习：与监督式学习不同的是训练数据中不包含预期的输出，希望机器自动通过输入特征学习到潜在的模式，典型的如聚类
 主动学习：是半监督机器学习的一个特例，在主动学习中，一个学习算法可以交互式的询问用户（或其他信息源）来获得在新的数据点所期望的输出
@@ -29,13 +31,15 @@
 5. 有选择性的安排实验，来快速的评估抗癌药物的效果，类似主动学习，对每一种药物，由于不知道实际效果，于是进行小白鼠实验，来获得输出
 
 ## Problem 6-8
-![QQ截图20170529013203.png-103.2kB][3]
+![][3]
+
 6. f 对任何输入都输出 +1，g 对偶数下标的样本输出 -1，所以只需要判断 N+1 到 N+L 中有多少个偶数即可，可以分不同情况讨论：若 L 为偶数，则肯定有 L/2 个偶数；若 L 为奇数，N+1 也为奇数，则奇数占多数，故有 (L-1)/2 个偶数；若 L 为奇数，N+1 为偶数，则偶数占多数，故有 (L+1)/2 个偶数。最后可整理为一个式子 1/L * ([(N+L)/2] - [N/2])，(中括号表示向下取整)
 7. 题目意思是 f 在训练集上完全正确，则有多少种不同的 f，由于测试集上的每一个样本都有两种可能输出，所以不同的 f 有 2^L 种
 8. 未完全理解
 
 ## Problem 9-12
-![选区_001.png-76.8kB][4]
+![][4]
+
 从罐子中随机抓取一个小球为橘色的概率为 u，现从中随机抓取10个小球，橘色小球个数为 10v
 9. 随机抓取的10个小球中有5个是橘色的概率：`C(10, 5) * 0.5^5 * 0.5^5 = 63/256`
 10. 随机抓取的10个小球中有9个是橘色的概率：`C(10, 9) * 0.9^9 * 0.1^1 = 0.9^9`
@@ -43,7 +47,8 @@
 12. `u=0.9, v<=0.1 => |u-v|>=0.8, epsilon=0.8`， 由Hoeffding不等式 `P(|u-v|>=epsilon) <= 2 * exp(-2 * N * epsilon^2) `，带入计算得 `5.5215e-6`
 
 ## Problem 13-14
-![13-14.png-101.3kB][5]
+![][5]
+
 13. AC两种骰子的1是橘色的，因此随机抽取到1个骰子是橘色1的概率为 0.5，所以抽取到5个橘色1的概率为 0.5^5
 14. 分析可知，AB两种骰子完全相反，CD两种骰子也是完全相反，所以要想抽到的骰子中存在某一点数是都是同一个颜色，那么就不能有两种以上的骰子的组合。最简单的，只抽到一种骰子，那肯定符合题意，抽到两种骰子，那么不能是AB，也不能是CD，这样一来可能的组合为：A、B、C、D、AC、AD、BC、BD，它们的概率都可以求出来，前四种的概率都相等，为 `0.25^5`，后四种的也都相等，为 `( C(5,1) + C(5,2) + C(5,3) + C(5,4) )* 0.25^5`
 
@@ -60,12 +65,12 @@
 ---
 
 ## 参考
-http://blog.csdn.net/a1015553840/article/details/50986313
-http://blog.csdn.net/a1015553840/article/details/50979434
-http://blog.csdn.net/a1015553840/article/details/50979640
+- http://blog.csdn.net/a1015553840/article/details/50986313
+- http://blog.csdn.net/a1015553840/article/details/50979434
+- http://blog.csdn.net/a1015553840/article/details/50979640
 
-  [1]: http://static.zybuluo.com/huxy/2wxh5z49li2sw2ifs1u95k5s/QQ%E6%88%AA%E5%9B%BE20170528235206.png
-  [2]: http://static.zybuluo.com/huxy/zv6lp53ldmfa2vhtlduguq4i/QQ%E6%88%AA%E5%9B%BE20170529004959.png
-  [3]: http://static.zybuluo.com/huxy/nsuke6qbbl63ah1l12j9ykwn/QQ%E6%88%AA%E5%9B%BE20170529013203.png
-  [4]: http://static.zybuluo.com/huxy/lv56u30b84cyny2mtadd8r35/%E9%80%89%E5%8C%BA_001.png
-  [5]: http://static.zybuluo.com/huxy/gg0f95x7yxxoz54bp82wjpxx/13-14.png
+  [1]: https://github.com/huxy29/learning-machine-learning/blob/master/machine-learning-foundations/hw1/screenshot/1.png
+  [2]: https://github.com/huxy29/learning-machine-learning/blob/master/machine-learning-foundations/hw1/screenshot/2-5.png
+  [3]: https://github.com/huxy29/learning-machine-learning/blob/master/machine-learning-foundations/hw1/screenshot/6-8.png
+  [4]: https://github.com/huxy29/learning-machine-learning/blob/master/machine-learning-foundations/hw1/screenshot/9-12.png
+  [5]: https://github.com/huxy29/learning-machine-learning/blob/master/machine-learning-foundations/hw1/screenshot/13-14.png
