@@ -1,6 +1,7 @@
 # hw1
 
-[hw1-solution][1]
+
+hw1 解答链接：[hw1-solution][1]
 
 数据下载地址：
 - [hw1_15_train.dat][2]
